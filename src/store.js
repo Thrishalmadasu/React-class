@@ -1,6 +1,17 @@
 import { createStore } from "redux";
 import { act } from "react";
 import { omit } from "lodash";
+
+const ADD_TO_CART = "ADD_TO_CART_ONE";
+const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+
+export function removeFromCart(product){
+    return{
+        type : REMOVE_FROM_CART,
+        payload : product
+    };
+}
+
 function cartReducer(state={items : {}},action){
     const product = action.payload;
     switch(action.type){
