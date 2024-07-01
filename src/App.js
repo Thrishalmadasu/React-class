@@ -4,6 +4,8 @@ import Products from './components/Products/Products';
 import { useState } from 'react';
 import CartContext from './context/cartContext';
 import Cart from './components/Cart/cart';
+
+
 function App() {
   let [cart, setCart] = useState({});
   function increaseQuantity(product) {
